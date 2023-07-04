@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+    <title>NavBar practice</title>
+</head>
+<body>    
+    <nav class="navbar"> 
+        <a href="#Home"><img src="logoo.png" width="50" height="48"></a>
+        <div class="brand-title">Welcome to NITD</div>
+        <a href="#none" class="toggle-button" onclick="showmenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </a>
+        <div class="navbar-links" id="navlinks">
+            <a href="#none" class="toggle-button2" onclick="hidemenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Branches">Branches</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="slide">
+        <div class="profile">
+            <img src="logoo.png" height="50px" width="50px" alt="profilepic">
+        </div>
+        <h3>Username</h3>
+
+        <div class="profilecontent">
+            <ul>
+                <li><h3>NAME: Bijay Shankar</h3></li>
+                <li><h3>DOB: 15th sept 2003</h3></li>
+                <li><h3>BRANCH: BioTech</h3></li>
+                <li><h3>ABOUT: Sample</h3> </li>
+            </ul>
+        </div>
+    </div>
+    
+    <section class="header" id="Home">
+
+        
+        <div class="text">
+            <h1>National Institute of Technology</h1>
+            <p> An Institute of National Importance under Ministry of Education, Government of India. <br>
+            Institute of technology in Durgapur, West Bengal</p>
+            <a href="https://en.wikipedia.org/wiki/National_Institute_of_Technology,_Durgapur" target="_blank" class="vstbutton"> Click here to know more</a>
+        </div>
+    </section>
+    <section class="branches" id="Branches">
+        <h1 class="branch">BRANCHES</h1>
+        <p>Technical Branches (B.E/B.Tech)</p>
+
+        <div class="row">
+            <div class="column">
+                <h3>CSE</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aspernatur earum unde voluptatum. Laborum labore possimus deleniti a obcaecati tempora?</p>
+            </div>
+            <div class="column">
+                <h3>ECE</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aspernatur earum unde voluptatum. Laborum labore possimus deleniti a obcaecati tempora?</p>
+            </div>
+            <div class="column">
+                <h3>BIOTECH</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aspernatur earum unde voluptatum. Laborum labore possimus deleniti a obcaecati tempora?</p>
+            </div>
+        </div>
+    </section>
+    <section id="About">
+        <h1 class="about">ABOUT</h1>
+        <p>National Institute of Technology Durgapur (also known as NIT Durgapur or NITDGP), formerly known as Regional Engineering College, Durgapur (also known as REC Durgapur or RECDGP), is a public technical university in the city of Durgapur in West Bengal, India. Founded in 1960, it is one of India's oldest technical universities. It is located in a campus of 187 acres (0.75 km²).
+
+            National Institutional Ranking Framework ranked the university 6th among the NITs, 29th for engineering, and 71st overall in India in 2021</p>
+
+        <div class="row2">
+            <div class="column2">
+                <img src="class.jpeg" alt="campus" width="100%">
+            </div>
+            <div class="column2">
+                <h1>Address</h1>
+                <p>Mahatma Gandhi Rd, A-Zone, Durgapur, West Bengal 713209
+                    National Institute of Technology Durgapur</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4473.448810409204!2d87.29094961536468!3d23.5476766024062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f772081cede5e9%3A0x33fb9ccb243dfa5!2sNational%20Institute%20of%20Technology%20Durgapur!5e1!3m2!1sen!2sin!4v1655645611966!5m2!1sen!2sin"   style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <section id="Contact">
+        <h1 class="contact">CONTACT</h1>
+        <div>
+            <div class="column">
+                <h3>Write Us</h3>
+                <form  onsubmit="sendEmail(); reset(); return false;">
+                    <div>
+                        <label for="firstname">First Name :</label>
+                        <br>
+                        <input placeholder="First Name" type="text" name="firstname" id="firstname" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="lastname">Last Name :</label>
+                        <br>
+                        <input placeholder="Last Name" type="text" name="lastname" id="lastname" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="phone">Phone :</label>
+                        <br>
+                        <input placeholder="Phone Number" type="text" name="phone" id="phone" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email">Email ID :</label>
+                        <br>
+                        <input placeholder="xyz@gmail.com" type="email" name="email" id="email" min="0" max="200" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="message">Message :</label>
+                        <br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    </div>
+                    <br>
+                    <button type="reset" class="button1">Reset</button>
+                    <button type="submit" class="button2">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
