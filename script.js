@@ -24,3 +24,26 @@ function hidemenu(){
     // navlinks.style.display = "none";
 
 }
+// var firstname=document.getElementById("firstname");
+// var lastname=document.getElementById("lastname");
+// var phone=document.getElementById("phone");
+// var email=document.getElementById("email");
+// var message=document.getElementById("message");
+
+function sendEmail(){
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "bijay.shankar4321@gmail.com",
+        Password : "E697798911DE11C105987E652EC46C1DB028",
+        To : 'bjcrazytechz@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact Form Enquiry @NITD",
+        Body : "First Name: " + document.getElementById("firstname").value 
+        + "<br> Last Name: " + document.getElementById("lastname").value 
+        + "<br> Phone: " + document.getElementById("phone").value 
+        + "<br> Email: " + document.getElementById("email").value 
+        + "<br> Message: " + document.getElementById("message").value
+}).then(
+message => alert("message sent sucessfully")
+);
+}
